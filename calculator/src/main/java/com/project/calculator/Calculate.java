@@ -1,22 +1,28 @@
 package com.project.calculator;
 
-public class Calculator {
+public class Calculate {
 
     public static double calculate(double operand1, double operand2, char operator) {
+        double hasil = 0 ;
         switch (operator) {
             case '+':
-                return operand1 + operand2;
+                hasil = operand1 + operand2;
+                break;
             case '-':
-                return operand1 - operand2;
+                hasil = operand1 - operand2;
+                break;
             case '*':
-                return operand1 * operand2;
+                hasil = operand1 * operand2;
+                break;
             case '/':
                 if (operand2 == 0) {
                     throw new IllegalArgumentException("Pembagi tidak boleh nol.");
                 }
-                return operand1 / operand2;
+                hasil = operand1 / operand2;
+                break;
             default:
                 throw new IllegalArgumentException("Operator tidak valid.");
         }
+        return hasil;
     }
 }

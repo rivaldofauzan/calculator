@@ -23,7 +23,7 @@ public class CalculatorApplication {
 
         // Memanggil metode compute dari kelas Computation untuk melakukan perhitungan
         String result = Computation.compute(Double.toString(operand1), Double.toString(operand2), Character.toString(operator));
-        System.out.println("Hasil: " + result);
+        System.out.println(result);
 
         scanner.close();
     }

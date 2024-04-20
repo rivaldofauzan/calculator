@@ -16,7 +16,7 @@ public class Computation {
                 return "Operator tidak valid.";
             }
 
-            double result = Calculator.calculate(operand1, operand2, operator);
+            double result = Calculate.calculate(operand1, operand2, operator);
 
             // Check jika hasilnya adalah bilangan bulat atau mengandung desimal
             if (result % 1 == 0) {
