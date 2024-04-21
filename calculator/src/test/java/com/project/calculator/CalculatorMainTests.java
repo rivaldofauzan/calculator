@@ -1,6 +1,7 @@
 package com.project.calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorMainTests {
 
@@ -34,9 +35,16 @@ public class CalculatorMainTests {
 
     @Test
     public void testDivisionByZero() {
-        // TC-005: Testing division by zero
-        Assertions.assertThrows(ArithmeticException.class, () -> {
-            Computation.compute("10", "0", "/");
-        }, "Division by zero should throw an ArithmeticException");
+        double operand1 = 10;
+        double operand2 = 0;
+        char operator = '/';
+
+        // Expect an IllegalArgumentException to be thrown
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            Calculate.calculate(operand1, operand2, operator);
+        });
+
+        // Check if the exception message is correct
+        assertEquals("Pembagi tidak boleh nol.", exception.getMessage());
     }
 }
