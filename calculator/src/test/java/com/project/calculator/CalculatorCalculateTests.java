@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CalculatorApplicationTests {
+public class CalculatorCalculateTests {
 
 	@Test
 	public void testAddition() {
